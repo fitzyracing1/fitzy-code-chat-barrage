@@ -1,0 +1,42 @@
+# Fitzy Code Chat
+
+> A RAG chat over all fitzyracing1 GitHub repos.
+
+## Purpose
+Explain the chat as a way to ask questions against the whole public code shelf. Source: fitzyracing1/fitzy-code-chat.
+
+## How it works (plain English)
+1. Index the repos.
+2. Ask a question.
+3. Retrieve matching pieces.
+4. Answer from those pieces.
+
+## Key ideas
+- RAG (find relevant files, then answer)
+- Portfolio chat (the shelf is the user’s repos)
+
+## The actual code
+```
+# source: fitzyracing1/fitzy-code-chat
+index_repos()
+hits = retrieve(question)
+answer(hits)
+```
+
+## Line-by-line translation
+1. index_repos() → “build a searchable shelf of the repos”
+2. retrieve(question) → “pull the matching pieces”
+3. answer(hits) → “speak from those pieces”
+
+## Decisions the program makes
+- If a question arrives → retrieve then answer
+- If the shelf is empty → index first
+
+## What a person would notice
+One chat over many repos.
+
+## Current status
+Barrage clone.
+
+## Next possible steps
+Open fitzyracing1/fitzy-code-chat and ask one question.
